@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <html>
+
+<head>
+    Javascript Error Handling
+</head>
+
+
+<body>
+
+    <p>This example demonstrates how to use <b>catch</b>to display an error</p>
+    <p id="error_message">
+        <p id="result"></p>
+    </p>
+    <script>
+        function CheckAge(age){
+            if(age<18){
+                throw new Error("User must be 18 years old");
+            }
+            console.log("Age is Valid",age);
+        }
+        try{
+            CheckAge(16);
+        }
+        catch(error){
+            console.error("Error",error.message);
+        }
+        finally{
+            console.log("Age Validation Complete");
+        }
+ add=(a,b)=> a+b;
+ document.getElementById("result").innerHTML= add(10,40);
+    </script>
+
+</body>
+
+</html>
